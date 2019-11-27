@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vuw tutrial </title>
+    <script src="https://unpkg.com/vue@2.6.10/dist/vue.js"></script>
+</head>
+<body>
+<div id="vue-app">
+    <h1>{{ greet('night') }}</h1>
+    <p> my name  {{ name }} </p>
+    <p> my job  {{ job }} </p>
+
+    <hr>
+    <h1>data binding</h1>
+    <a v-bind:href="website">this my webdite</a>
+    <input v-bind:value="job">
+    <!--<p v-html="websiteTage"></p>-->
+
+    <hr>
+    <h1>data evennt</h1>
+    <!--<button v-on:click="age++">add age</button>-->
+    <!--<button v-on:click="age&#45;&#45;">subscrib age</button>-->
+    <p> my age is:{{age}}</p>
+</div>
+<script src="js/app.js"></script>
+
+</body>
+</html>
