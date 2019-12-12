@@ -5,7 +5,7 @@ new Vue({
         age :'30' ,
         job :'front end developer',
         website:'www.google.com',
-        template: '<a href="google.com">this html link</a>'
+        websitetag: '<a href="www.google.com">this html link</a>'
 
 
     },
