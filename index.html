@@ -9,8 +9,8 @@
 <body>
 <div id="vue-app">
     <h1>{{ greet('night') }}</h1>
-    <p> my name  {{ name }} </p>
-    <p> my job  {{ job }} </p>
+    <p> my name {{ name }} </p>
+    <p> my job {{ job }} </p>
 
     <hr>
     <h1>data binding</h1>
@@ -27,8 +27,52 @@
     <p> my age is:{{age}}</p>
 
     <hr>
+    <h1>mouse events</h1>
     canvas
-    <div class="canvas" v-on:mousemove = "postion">{{x}},{{y}}</div>
+    <div class="canvas" v-on:mousemove="postion">{{x}},{{y}}</div>
+
+    <hr>
+    <h1>Two-Way Data Binding</h1>
+    <label>name</label>
+    <input type="text" v-model="name2">
+    name is {{ name2 }}
+    <br>
+    <label>age</label>
+    <input type="text" v-model="age2">
+    name is {{ age2 }}
+
+
+    <hr>
+    <h1>Computed Properties</h1>
+    <button @click="a++">add to a</button>
+    <button v-on:click="b++"> add to b</button>
+    <h3>a- {{a}}</h3>
+    <h3> b- {{b}}</h3>
+    <h3> A + age {{ AddAToAge }}</h3>
+    <h3>B + age {{ AddBToAge }}</h3>
+
+
+    <hr>
+    <h1> - Dynamic CSS Classes</h1>
+    <h2>examplae 1</h2>
+    <div @click=" available = !available " v-bind:class="{available}">
+        <span>bind class by v-bind</span>
+    </div>
+
+    ---
+    <h2>expamle2</h2>
+    <button @click=" available2 = !available2 " >change class</button>
+    <div v-bind:class="comClass">
+        <span>bind class by v-bind</span>
+    </div>
+
+---
+    <hr>
+    <h1>- Conditionals</h1>
+    <button @click="success = !success">success</button>
+    <button @click="error = !error">error</button>
+    <p v-if="!error"> there is an error!</p>
+    <p v-else-if="!success"> every thing go good !</p>
 </div>
 <script src="js/app.js"></script>
 

@@ -4,3 +4,20 @@
     padding: 100px;
     border: solid 2px rebeccapurple;
 }
+span
+{
+   background: rebeccapurple;
+    padding: 30px;
+    font-size: 30px;
+    color: #fff;
+    margin: 15px;
+    display: block;
+}
+.available span
+{
+    background: black;
+}
+.available2 span
+{
+    background: red;
+}
